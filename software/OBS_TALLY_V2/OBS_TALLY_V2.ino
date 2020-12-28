@@ -30,7 +30,7 @@ const char* prefix = "ID1";                             // OBS source name prefi
 
 // Pin configuration
 #define LED_PIN    D5      // GPIO14 connected to NeoPixels
-#define BUTTON_PIN  D6     // GPIO12 connected to Push-Button
+#define BUTTON_PIN D6     // GPIO12 connected to Push-Button
 
 // How many NeoPixels are attached?
 #define LED_COUNT  6
@@ -286,8 +286,8 @@ void onMessageCallback(WebsocketsMessage message)
 
     if (DEBUG_ON)
     {
-		Serial.print("JSON filtered message size: ");
-		Serial.println(doc.memoryUsage());
+      Serial.print("JSON filtered message size: ");
+      Serial.println(doc.memoryUsage());
       //serializeJsonPretty(doc, Serial);
     }
 
