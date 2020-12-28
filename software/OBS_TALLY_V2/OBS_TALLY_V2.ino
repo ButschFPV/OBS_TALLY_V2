@@ -2,9 +2,9 @@
 
    Fill in SSID, password, WebSocket Host, prefix information
 
-   Connect WS2812b DIN LEDs to   D5 (GPIO14)
-   Connect BUTTON to         D6 (GPIO12)
-   Connect Potentiometer to  A0
+   Connect WS2812b DIN LEDs to D5 (GPIO14)
+   Connect BUTTON to           D6 (GPIO12)
+   Connect Potentiometer to    A0
 
    OBS Websocket API protocol:      // https://github.com/Palakis/obs-websocket/blob/4.x-current/docs/generated/protocol.md
 */
