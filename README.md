@@ -29,3 +29,8 @@ The Controller filters the JSON and looks for the programmed prefix in the sourc
 - Potentiometer
 - 4x M3x5mm cylinder head screw
 - 5x 3x16mm flat head screw
+
+### Limits
+The WebSocket messages can get very big, this is a problem for the small microcontroller.
+I recommend to not have more than 10 sources in a scene.
+If you enable debugging you can see the message and JSON Size in the serial monitor.
