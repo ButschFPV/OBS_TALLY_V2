@@ -286,6 +286,8 @@ void onMessageCallback(WebsocketsMessage message)
 
     if (DEBUG_ON)
     {
+		Serial.print("JSON filtered message size: ");
+		Serial.println(doc.memoryUsage());
       //serializeJsonPretty(doc, Serial);
     }
 
