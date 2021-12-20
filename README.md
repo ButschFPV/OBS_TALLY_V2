@@ -1,5 +1,7 @@
 # OBS_TALLY_V2
 
+## WARNING the code does not work reliable anymore.
+
 Just another Arduino based Tally-light for OBS.
 This Tally-light connects directly to the OBS WebSocket plugin via WiFi.
 
