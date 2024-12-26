@@ -1,6 +1,6 @@
 # OBS_TALLY_V2
 
-## WARNING the code does not work reliable anymore.
+## EXPERIMENTAL obs-websocket 5.x.x support
 
 Just another Arduino based Tally-light for OBS.
 This Tally-light connects directly to the OBS WebSocket plugin via WiFi.
@@ -9,14 +9,14 @@ This Tally-light connects directly to the OBS WebSocket plugin via WiFi.
 
 ### Features
 - Simple adressable via a prefix in the OBS source name (use for example a prefix like: **ID1** or **CAM1**)
+- Red LED for Live signal
 - Green LED for preview signal (works only if you use OBS in Studio Mode)
 - WiFi connectivity
 - Uses only a few cheap components (no additional Raspberry Pi required)
 
 ### How does it work
-The Tally-light connects to OBS WebSocket plugin and gets updates when for example the scene changes.
-Those messages contains all used sources from the active scene in a JSON format.
-The Controller filters the JSON and looks for the programmed prefix in the source name.
+The Tally-light connects to the OBS WebSocket plugin and subscribes to InputActiveStateChanged and InputShowStateChanged events.
+Received events gets checked for the prefix in sourceName.
 
 ### Images
 ![IMG_preview-active](/images/IMG_preview-active.JPG)
@@ -31,8 +31,3 @@ The Controller filters the JSON and looks for the programmed prefix in the sourc
 - Potentiometer
 - 4x M3x5mm cylinder head screw
 - 5x 3x16mm flat head screw
-
-### Limits
-The WebSocket messages can get very big, this is a problem for the small microcontroller.
-I recommend to not have more than 10 sources in a scene.
-If you enable debugging you can see the message and JSON Size in the serial monitor.
